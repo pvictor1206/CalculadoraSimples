@@ -26,7 +26,7 @@ public class Controlador_do_BTCalcular implements View.OnClickListener{
 
                 break;
     }
-        Log.v("PDM","Valor Res:"+res);
+        Log.v("PDM","Valor Res: "+res);
 
     }
 }
