@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tvRes;
     int operacao=0; //Somar
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Chamando o código da Activty mãe
@@ -53,33 +55,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view){
         if(view==btCalc){ //Gerenciando o evento onClick do Botão Calcular
+            if (oper1.getText().toString().equals("") || oper2.getText().toString().equals("")) {
+                tvRes.setText("Vazio");
+            }
+            else {
+                double numOper1 = Double.parseDouble(oper1.getText().toString());
+                double numOper2 = Double.parseDouble(oper2.getText().toString());
+                double res = 0;
 
-            double numOper1 = Double.parseDouble(oper1.getText().toString());
-            double numOper2 = Double.parseDouble(oper2.getText().toString());
-            double res=0;
+                switch (operacao) {
+                    case 0: //Soma
+                        res = numOper1 + numOper2;
+                        break;
+                    case 1: //Subtração
+                        res = numOper1 - numOper2;
+                        break;
+                    case 2: //Multiplicação
+                        res = numOper1 * numOper2;
+                        break;
+                    case 3: //Divisão
+                        res = numOper1 / numOper2;
+                        break;
 
+                }
 
-            switch (operacao){
-                case 0: //Soma
-                    res= numOper1+numOper2;
-                    break;
-                case 1: //Subtração
-                    res= numOper1-numOper2;
-                    break;
-                case 2: //Multiplicação
-                    res= numOper1 * numOper2;
-                    break;
-                case 3: //Divisão
-                    res=numOper1/numOper2;
-                    break;
+                if (operacao == 3 && numOper2 == 0)
+                    tvRes.setText("Não é possível dividir um número por zero.");
+                else
+                    tvRes.setText("" + res);
+
 
             }
-            tvRes.setText(""+res);
+
+
 
         }
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

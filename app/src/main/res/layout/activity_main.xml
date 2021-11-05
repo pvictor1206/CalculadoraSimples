@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
-    android:background="#03A9F4"
+    android:background="#D8E9EF"
     android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="#03A9F4"
+        android:background="#D8E9EF"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="159dp"
             android:contentDescription="@string/contDec"
             android:importantForAccessibility="no"
             app:srcCompat="@mipmap/im_dinheiro_round" />
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/oper1"
             android:text="@string/oper1"
-            android:textColor="#FFFFFF"
+            android:textColor="#3F51B5"
             android:textSize="24sp" />
 
         <EditText
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/oper2"
-            android:textColor="#FFFFFF"
+            android:textColor="#3F51B5"
             android:textSize="24sp" />
 
         <EditText
@@ -65,15 +65,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="#FFFFFF">
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewOpera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/oper"
-                android:textColor="#03A9F4"
+                android:textColor="#3F51B5"
                 android:textSize="24sp" />
 
             <Spinner
@@ -102,26 +102,26 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="210dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="#FF9800"
+                android:background="#3F51B5"
                 android:importantForAccessibility="yes"
                 android:text="@string/buttonCalc"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/tV_res"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:text="@string/res"
-                android:textColor="#FFFFFF"
+                android:textColor="#673AB7"
                 android:textSize="36sp" />
 
 
         </LinearLayout>
-
 
 
     </LinearLayout>

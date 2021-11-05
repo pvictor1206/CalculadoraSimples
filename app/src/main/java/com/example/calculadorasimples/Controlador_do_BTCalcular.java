@@ -23,10 +23,20 @@ public class Controlador_do_BTCalcular implements View.OnClickListener{
         switch (this.mainActivity.operacao){
             case 0:
                 res= numOper1+numOper2;
-
+            case 1:
+                res = numOper1-numOper2;
+            case 2:
+                res = numOper1*numOper2;
+            case 3:
+                if (numOper2 == 0){
+                    break;
+                }
+                else {
+                    res = numOper1 / numOper2;
+                }
                 break;
-    }
-        Log.v("PDM","Valor Res: "+res);
+        }
+        Log.v("PDM","Valor Res:"+res);
 
     }
 }
